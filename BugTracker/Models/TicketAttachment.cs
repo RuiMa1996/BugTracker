@@ -7,7 +7,7 @@ namespace BugTracker.Models
 {
     public class TicketAttachment
     {
-        public int id { get; set; }
+        public int Id { get; set; }
 
         
         public string FilePath { get; set; }
@@ -16,11 +16,11 @@ namespace BugTracker.Models
 
         [Foreignkey("Ticket")]
         public int TicketId { get; set; }
-        public virtual Ticket Ticket { get; set; }
+        //public virtual Ticket Ticket { get; set; }
 
         [Foreignkey("ApplicationUser")]
         public string UserId { get; set; }
-        public virtual ApplicationUser ApplicationUser { get;set; }
+        //public virtual ApplicationUser ApplicationUser { get;set; }
 
         public string FileUrl { get; set; }
     }

@@ -1,7 +1,10 @@
-﻿using Microsoft.Owin;
+﻿using BugTracker.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(BugTracker.Startup))]
+[assembly: OwinStartup(typeof(BugTracker.Startup))]
 namespace BugTracker
 {
     public partial class Startup
@@ -10,5 +13,6 @@ namespace BugTracker
         {
             ConfigureAuth(app);
         }
+
     }
 }
