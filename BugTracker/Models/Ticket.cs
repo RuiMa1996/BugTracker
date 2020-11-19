@@ -11,8 +11,8 @@ namespace BugTracker.Models
         public int Id { get; set; }
         public string Titile { get; set; }
         public string Description { get; set; }
-        public bool Created { get; set; }
-        public bool Updated { get; set; }
+        public DateTime Created { get; set; } = DateTime.Now;
+        public DateTime Updated { get; set; } 
 
         [Foreignkey("Project")] 
         public string ProjectId { get; set; }
@@ -25,6 +25,10 @@ namespace BugTracker.Models
         [Foreignkey("TicketStatus")]
         public int TicketStatusId { get; set; }
         public virtual TicketStatus TicketStatus { get; set; }
+
+        [Foreignkey("TicketPriority")]
+        public int TicketPriorityId { get; set; }
+        public virtual TicketPriority TicketPriority { get; set; }
 
         [Foreignkey("OwnerUser")]
         public string OwnerUserId { get; set; }

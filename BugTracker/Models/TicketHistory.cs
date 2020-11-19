@@ -7,11 +7,11 @@ namespace BugTracker.Models
 {
     public class TicketHistory
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public string Property { get; set; }
-        public int OldValue { get; set; }
-        public int NewValue { get; set; }
-        public bool Changed { get; set; }
+        public string OldValue { get; set; }
+        public string NewValue { get; set; }
+        public DateTime Changed { get; set; }
 
         [Foreignkey("Ticket")]
         public int TicketId { get; set; }

@@ -181,6 +181,10 @@
     <Compile Include="Migrations\202011191909545_AddAdmin1.Designer.cs">
       <DependentUpon>202011191909545_AddAdmin1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011192028246_FixASmallIssue.cs" />
+    <Compile Include="Migrations\202011192028246_FixASmallIssue.Designer.cs">
+      <DependentUpon>202011192028246_FixASmallIssue.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ForeignkeyAttribute.cs" />
@@ -283,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011191909545_AddAdmin1.resx">
       <DependentUpon>202011191909545_AddAdmin1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011192028246_FixASmallIssue.resx">
+      <DependentUpon>202011192028246_FixASmallIssue.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

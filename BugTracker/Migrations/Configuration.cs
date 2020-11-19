@@ -59,7 +59,7 @@ namespace BugTracker.Migrations
 
 
             /*------------------------------------------------------------------------------------------------------*/
-            /*Creating and adding one user to each role*/
+            /*Creating and adding one user to admin role*/
             var PasswordHash = new PasswordHasher();
             var user1 = new ApplicationUser
             {
