@@ -203,6 +203,10 @@
     <Compile Include="Migrations\202011192117418_FixProblems.Designer.cs">
       <DependentUpon>202011192117418_FixProblems.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011201628552_FetchedCode.cs" />
+    <Compile Include="Migrations\202011201628552_FetchedCode.Designer.cs">
+      <DependentUpon>202011201628552_FetchedCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ForeignkeyAttribute.cs" />
@@ -322,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011192117418_FixProblems.resx">
       <DependentUpon>202011192117418_FixProblems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011201628552_FetchedCode.resx">
+      <DependentUpon>202011201628552_FetchedCode.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
