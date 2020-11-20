@@ -175,37 +175,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202011200718202_abc.cs" />
-    <Compile Include="Migrations\202011200718202_abc.Designer.cs">
-      <DependentUpon>202011200718202_abc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011200839392_aaa.cs" />
-    <Compile Include="Migrations\202011200839392_aaa.Designer.cs">
-      <DependentUpon>202011200839392_aaa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011200844164_bbb.cs" />
-    <Compile Include="Migrations\202011200844164_bbb.Designer.cs">
-      <DependentUpon>202011200844164_bbb.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011200854174_hhhh.cs" />
-    <Compile Include="Migrations\202011200854174_hhhh.Designer.cs">
-      <DependentUpon>202011200854174_hhhh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011200901154_ggg.cs" />
-    <Compile Include="Migrations\202011200901154_ggg.Designer.cs">
-      <DependentUpon>202011200901154_ggg.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011200903208_qwe.cs" />
-    <Compile Include="Migrations\202011200903208_qwe.Designer.cs">
-      <DependentUpon>202011200903208_qwe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011192117418_FixProblems.cs" />
-    <Compile Include="Migrations\202011192117418_FixProblems.Designer.cs">
-      <DependentUpon>202011192117418_FixProblems.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011201628552_FetchedCode.cs" />
-    <Compile Include="Migrations\202011201628552_FetchedCode.Designer.cs">
-      <DependentUpon>202011201628552_FetchedCode.cs</DependentUpon>
+    <Compile Include="Migrations\202011201904262_ssss.cs" />
+    <Compile Include="Migrations\202011201904262_ssss.Designer.cs">
+      <DependentUpon>202011201904262_ssss.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -306,29 +278,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202011200718202_abc.resx">
-      <DependentUpon>202011200718202_abc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011200839392_aaa.resx">
-      <DependentUpon>202011200839392_aaa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011200844164_bbb.resx">
-      <DependentUpon>202011200844164_bbb.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011200854174_hhhh.resx">
-      <DependentUpon>202011200854174_hhhh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011200901154_ggg.resx">
-      <DependentUpon>202011200901154_ggg.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011200903208_qwe.resx">
-      <DependentUpon>202011200903208_qwe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011192117418_FixProblems.resx">
-      <DependentUpon>202011192117418_FixProblems.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011201628552_FetchedCode.resx">
-      <DependentUpon>202011201628552_FetchedCode.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011201904262_ssss.resx">
+      <DependentUpon>202011201904262_ssss.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
