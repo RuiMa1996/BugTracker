@@ -178,6 +178,10 @@
     <Compile Include="Migrations\202011192117389_NEWPULLEDCODE.Designer.cs">
       <DependentUpon>202011192117389_NEWPULLEDCODE.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011201628552_FetchedCode.cs" />
+    <Compile Include="Migrations\202011201628552_FetchedCode.Designer.cs">
+      <DependentUpon>202011201628552_FetchedCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ForeignkeyAttribute.cs" />
@@ -281,6 +285,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202011192117389_NEWPULLEDCODE.resx">
       <DependentUpon>202011192117389_NEWPULLEDCODE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011201628552_FetchedCode.resx">
+      <DependentUpon>202011201628552_FetchedCode.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
