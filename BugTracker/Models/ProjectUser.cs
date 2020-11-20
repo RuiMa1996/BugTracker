@@ -9,8 +9,10 @@ namespace BugTracker.Models
     {
         public int Id { get; set; }
         public int ProjectId { get; set; }
+        public virtual Project Project { get; set; }
         public string UserId { get; set; }
-        public virtual List<Project> Projects { get; set; }
-        public virtual List<ApplicationUser> Users { get; set; }
+        public virtual ApplicationUser User { get; set; }
+        
+        
     }
 }
