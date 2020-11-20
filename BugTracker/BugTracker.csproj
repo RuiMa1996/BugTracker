@@ -170,25 +170,54 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+<<<<<<< HEAD
+    <Compile Include="Controllers\TicketsController.cs" />
+=======
     <Compile Include="Controllers\UserController.cs" />
+>>>>>>> parent of effbe35 (Add remove role page)
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202011190609180_AddAdmin.cs" />
-    <Compile Include="Migrations\202011190609180_AddAdmin.Designer.cs">
-      <DependentUpon>202011190609180_AddAdmin.cs</DependentUpon>
+    <Compile Include="Migrations\202011200718202_abc.cs" />
+    <Compile Include="Migrations\202011200718202_abc.Designer.cs">
+      <DependentUpon>202011200718202_abc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202011191909545_AddAdmin1.cs" />
-    <Compile Include="Migrations\202011191909545_AddAdmin1.Designer.cs">
-      <DependentUpon>202011191909545_AddAdmin1.cs</DependentUpon>
+    <Compile Include="Migrations\202011200839392_aaa.cs" />
+    <Compile Include="Migrations\202011200839392_aaa.Designer.cs">
+      <DependentUpon>202011200839392_aaa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202011192028246_FixASmallIssue.cs" />
-    <Compile Include="Migrations\202011192028246_FixASmallIssue.Designer.cs">
-      <DependentUpon>202011192028246_FixASmallIssue.cs</DependentUpon>
+    <Compile Include="Migrations\202011200844164_bbb.cs" />
+    <Compile Include="Migrations\202011200844164_bbb.Designer.cs">
+      <DependentUpon>202011200844164_bbb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011200854174_hhhh.cs" />
+    <Compile Include="Migrations\202011200854174_hhhh.Designer.cs">
+      <DependentUpon>202011200854174_hhhh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011200901154_ggg.cs" />
+    <Compile Include="Migrations\202011200901154_ggg.Designer.cs">
+      <DependentUpon>202011200901154_ggg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011200903208_qwe.cs" />
+    <Compile Include="Migrations\202011200903208_qwe.Designer.cs">
+      <DependentUpon>202011200903208_qwe.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202011192117418_FixProblems.cs" />
     <Compile Include="Migrations\202011192117418_FixProblems.Designer.cs">
       <DependentUpon>202011192117418_FixProblems.cs</DependentUpon>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 645ffad73a3d3e465c6e8eafb517f53c3bb2172a
+    </Compile>
+    <Compile Include="Migrations\202011201628552_FetchedCode.cs" />
+    <Compile Include="Migrations\202011201628552_FetchedCode.Designer.cs">
+      <DependentUpon>202011201628552_FetchedCode.cs</DependentUpon>
+<<<<<<< HEAD
+=======
+>>>>>>> parent of effbe35 (Add remove role page)
+=======
+>>>>>>> 645ffad73a3d3e465c6e8eafb517f53c3bb2172a
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -200,7 +229,6 @@
     <Compile Include="Models\Ticket.cs" />
     <Compile Include="Models\TicketAttachment.cs" />
     <Compile Include="Models\TicketComment.cs" />
-    <Compile Include="Models\TicketHelper.cs" />
     <Compile Include="Models\TicketHistory.cs" />
     <Compile Include="Models\TicketNotification.cs" />
     <Compile Include="Models\TicketPriority.cs" />
@@ -271,6 +299,13 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\AddUserToRole.cshtml" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 645ffad73a3d3e465c6e8eafb517f53c3bb2172a
+    <Content Include="Views\User\RemoveUserFromeRole.cshtml" />
+=======
+>>>>>>> parent of effbe35 (Add remove role page)
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -289,17 +324,38 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202011190609180_AddAdmin.resx">
-      <DependentUpon>202011190609180_AddAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011200718202_abc.resx">
+      <DependentUpon>202011200718202_abc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011191909545_AddAdmin1.resx">
-      <DependentUpon>202011191909545_AddAdmin1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011200839392_aaa.resx">
+      <DependentUpon>202011200839392_aaa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011192028246_FixASmallIssue.resx">
-      <DependentUpon>202011192028246_FixASmallIssue.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011200844164_bbb.resx">
+      <DependentUpon>202011200844164_bbb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011200854174_hhhh.resx">
+      <DependentUpon>202011200854174_hhhh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011200901154_ggg.resx">
+      <DependentUpon>202011200901154_ggg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011200903208_qwe.resx">
+      <DependentUpon>202011200903208_qwe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011192117418_FixProblems.resx">
       <DependentUpon>202011192117418_FixProblems.cs</DependentUpon>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011201628552_FetchedCode.resx">
+      <DependentUpon>202011201628552_FetchedCode.cs</DependentUpon>
+=======
+>>>>>>> parent of effbe35 (Add remove role page)
+=======
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011201628552_FetchedCode.resx">
+      <DependentUpon>202011201628552_FetchedCode.cs</DependentUpon>
+>>>>>>> 645ffad73a3d3e465c6e8eafb517f53c3bb2172a
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

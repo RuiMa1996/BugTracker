@@ -18,9 +18,8 @@ namespace BugTracker.Models
         public int TicketId { get; set; }
         public virtual Ticket Ticket { get; set; }
 
-        [Foreignkey("ApplicationUser")]
         public string UserId { get; set; }
-        public virtual ApplicationUser ApplicationUser { get;set; }
+        public virtual ApplicationUser User { get;set; }
 
         public string FileUrl { get; set; }
     }
