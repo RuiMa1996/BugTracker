@@ -4,35 +4,104 @@
     ViewBag.Title = "Index";
 }
 
+<<<<<<< HEAD
+<h2>Index</h2>
+
+=======
 <h2>Here are your ticket(s)</h2>
 <h4>User Name:</h4>
+>>>>>>> d06529cb7024bf6f4e1a453682dcd912a5e127dd
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
+<<<<<<< HEAD
+            @Html.DisplayNameFor(model => model.AssignedToUser.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OwnerUser.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TicketPriority.id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TicketStatus.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TicketType.id)
+        </th>
+        <th>
+=======
+>>>>>>> d06529cb7024bf6f4e1a453682dcd912a5e127dd
             @Html.DisplayNameFor(model => model.Titile)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Description)
         </th>
         <th>
+<<<<<<< HEAD
+            @Html.DisplayNameFor(model => model.Created)
+=======
             Time Of Ticket Created
+>>>>>>> d06529cb7024bf6f4e1a453682dcd912a5e127dd
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Updated)
         </th>
         <th>
+<<<<<<< HEAD
+=======
             Handling By
         </th>
         <th>
+>>>>>>> d06529cb7024bf6f4e1a453682dcd912a5e127dd
             @Html.DisplayNameFor(model => model.ProjectId)
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
+<<<<<<< HEAD
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssignedToUser.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnerUser.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TicketPriority.id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TicketStatus.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TicketType.id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Titile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Created)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Updated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+=======
 <tr>
     <td>
         @Html.DisplayFor(modelItem => item.Titile)
@@ -58,6 +127,7 @@
         @Html.ActionLink("Delete", "Delete", new { id = item.Id })
     </td>
 </tr>
+>>>>>>> d06529cb7024bf6f4e1a453682dcd912a5e127dd
 }
 
 </table>

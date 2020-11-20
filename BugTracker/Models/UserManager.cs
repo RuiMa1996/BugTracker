@@ -54,6 +54,10 @@ namespace BugTracker.Models
             return userManager.GetRoles(userId).ToList();
         }
 
+        public static IdentityResult RemoveUserFromRole(string userId, string roleName)
+        {
+            return userManager.RemoveFromRoles(userId, roleName);
+        }
 
     }
 }
