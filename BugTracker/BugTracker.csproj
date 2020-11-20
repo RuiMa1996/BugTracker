@@ -171,22 +171,36 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\TicketsController.cs" />
-<<<<<<< HEAD
-    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202011201518229_ModelsVersionOne.cs" />
-    <Compile Include="Migrations\202011201518229_ModelsVersionOne.Designer.cs">
-      <DependentUpon>202011201518229_ModelsVersionOne.cs</DependentUpon>
-=======
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
+    <Compile Include="Migrations\202011200718202_abc.cs" />
+    <Compile Include="Migrations\202011200718202_abc.Designer.cs">
+      <DependentUpon>202011200718202_abc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202011192117389_NEWPULLEDCODE.cs" />
-    <Compile Include="Migrations\202011192117389_NEWPULLEDCODE.Designer.cs">
-      <DependentUpon>202011192117389_NEWPULLEDCODE.cs</DependentUpon>
->>>>>>> d06529cb7024bf6f4e1a453682dcd912a5e127dd
+    <Compile Include="Migrations\202011200839392_aaa.cs" />
+    <Compile Include="Migrations\202011200839392_aaa.Designer.cs">
+      <DependentUpon>202011200839392_aaa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011200844164_bbb.cs" />
+    <Compile Include="Migrations\202011200844164_bbb.Designer.cs">
+      <DependentUpon>202011200844164_bbb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011200854174_hhhh.cs" />
+    <Compile Include="Migrations\202011200854174_hhhh.Designer.cs">
+      <DependentUpon>202011200854174_hhhh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011200901154_ggg.cs" />
+    <Compile Include="Migrations\202011200901154_ggg.Designer.cs">
+      <DependentUpon>202011200901154_ggg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011200903208_qwe.cs" />
+    <Compile Include="Migrations\202011200903208_qwe.Designer.cs">
+      <DependentUpon>202011200903208_qwe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011192117418_FixProblems.cs" />
+    <Compile Include="Migrations\202011192117418_FixProblems.Designer.cs">
+      <DependentUpon>202011192117418_FixProblems.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -266,20 +280,8 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\AddUserToRole.cshtml" />
-=======
->>>>>>> d06529cb7024bf6f4e1a453682dcd912a5e127dd
-    <Content Include="Views\Tickets\Create.cshtml" />
-    <Content Include="Views\Tickets\Delete.cshtml" />
-    <Content Include="Views\Tickets\Details.cshtml" />
-    <Content Include="Views\Tickets\Edit.cshtml" />
-    <Content Include="Views\Tickets\Index.cshtml" />
-<<<<<<< HEAD
-    <Content Include="Views\User\RemoveUserFromeRole.cshtml" />
-=======
->>>>>>> d06529cb7024bf6f4e1a453682dcd912a5e127dd
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -298,13 +300,26 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <EmbeddedResource Include="Migrations\202011201518229_ModelsVersionOne.resx">
-      <DependentUpon>202011201518229_ModelsVersionOne.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="Migrations\202011192117389_NEWPULLEDCODE.resx">
-      <DependentUpon>202011192117389_NEWPULLEDCODE.cs</DependentUpon>
->>>>>>> d06529cb7024bf6f4e1a453682dcd912a5e127dd
+    <EmbeddedResource Include="Migrations\202011200718202_abc.resx">
+      <DependentUpon>202011200718202_abc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011200839392_aaa.resx">
+      <DependentUpon>202011200839392_aaa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011200844164_bbb.resx">
+      <DependentUpon>202011200844164_bbb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011200854174_hhhh.resx">
+      <DependentUpon>202011200854174_hhhh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011200901154_ggg.resx">
+      <DependentUpon>202011200901154_ggg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011200903208_qwe.resx">
+      <DependentUpon>202011200903208_qwe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011192117418_FixProblems.resx">
+      <DependentUpon>202011192117418_FixProblems.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
