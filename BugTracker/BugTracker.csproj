@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -184,6 +185,10 @@
     <Compile Include="Migrations\202011192028246_FixASmallIssue.cs" />
     <Compile Include="Migrations\202011192028246_FixASmallIssue.Designer.cs">
       <DependentUpon>202011192028246_FixASmallIssue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011192117418_FixProblems.cs" />
+    <Compile Include="Migrations\202011192117418_FixProblems.Designer.cs">
+      <DependentUpon>202011192117418_FixProblems.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -264,6 +269,8 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\AddUserToRole.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -290,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011192028246_FixASmallIssue.resx">
       <DependentUpon>202011192028246_FixASmallIssue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011192117418_FixProblems.resx">
+      <DependentUpon>202011192117418_FixProblems.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

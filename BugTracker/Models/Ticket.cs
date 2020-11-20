@@ -12,7 +12,7 @@ namespace BugTracker.Models
         public string Titile { get; set; }
         public string Description { get; set; }
         public DateTime Created { get; set; } = DateTime.Now;
-        public DateTime Updated { get; set; } 
+        public DateTime? Updated { get; set; } 
 
         [Foreignkey("Project")] 
         public string ProjectId { get; set; }
