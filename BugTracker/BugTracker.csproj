@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TicketssController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -287,6 +288,11 @@
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\AddUserToRole.cshtml" />
     <Content Include="Views\User\RemoveUserFromeRole.cshtml" />
+    <Content Include="Views\Ticketss\Create.cshtml" />
+    <Content Include="Views\Ticketss\Delete.cshtml" />
+    <Content Include="Views\Ticketss\Details.cshtml" />
+    <Content Include="Views\Ticketss\Edit.cshtml" />
+    <Content Include="Views\Ticketss\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
