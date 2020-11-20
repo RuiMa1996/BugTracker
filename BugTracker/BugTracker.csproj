@@ -170,20 +170,13 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TicketsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202011190609180_AddAdmin.cs" />
-    <Compile Include="Migrations\202011190609180_AddAdmin.Designer.cs">
-      <DependentUpon>202011190609180_AddAdmin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011191909545_AddAdmin1.cs" />
-    <Compile Include="Migrations\202011191909545_AddAdmin1.Designer.cs">
-      <DependentUpon>202011191909545_AddAdmin1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011192028246_FixASmallIssue.cs" />
-    <Compile Include="Migrations\202011192028246_FixASmallIssue.Designer.cs">
-      <DependentUpon>202011192028246_FixASmallIssue.cs</DependentUpon>
+    <Compile Include="Migrations\202011192117389_NEWPULLEDCODE.cs" />
+    <Compile Include="Migrations\202011192117389_NEWPULLEDCODE.Designer.cs">
+      <DependentUpon>202011192117389_NEWPULLEDCODE.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -195,7 +188,6 @@
     <Compile Include="Models\Ticket.cs" />
     <Compile Include="Models\TicketAttachment.cs" />
     <Compile Include="Models\TicketComment.cs" />
-    <Compile Include="Models\TicketHelper.cs" />
     <Compile Include="Models\TicketHistory.cs" />
     <Compile Include="Models\TicketNotification.cs" />
     <Compile Include="Models\TicketPriority.cs" />
@@ -264,6 +256,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Tickets\Create.cshtml" />
+    <Content Include="Views\Tickets\Delete.cshtml" />
+    <Content Include="Views\Tickets\Details.cshtml" />
+    <Content Include="Views\Tickets\Edit.cshtml" />
+    <Content Include="Views\Tickets\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -282,14 +279,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202011190609180_AddAdmin.resx">
-      <DependentUpon>202011190609180_AddAdmin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011191909545_AddAdmin1.resx">
-      <DependentUpon>202011191909545_AddAdmin1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011192028246_FixASmallIssue.resx">
-      <DependentUpon>202011192028246_FixASmallIssue.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011192117389_NEWPULLEDCODE.resx">
+      <DependentUpon>202011192117389_NEWPULLEDCODE.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
