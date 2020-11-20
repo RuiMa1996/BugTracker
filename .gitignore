@@ -341,4 +341,3 @@ healthchecksdb
 /BugTracker/Migrations/202011190603369_AddAdmin.cs
 *.cs
 /BugTracker/Migrations/202011190603369_AddAdmin.resx
-*.resx
