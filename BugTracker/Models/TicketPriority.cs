@@ -8,14 +8,7 @@ namespace BugTracker.Models
     public class TicketPriority
     {
         public int id { get; set; }
-        public Priority Name { get; set; }
+        public string Name { get; set; }
 
-    }
-
-    public enum Priority
-    {
-        High,
-        Normal,
-        Low,
     }
 }

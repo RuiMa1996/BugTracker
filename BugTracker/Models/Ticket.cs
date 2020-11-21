@@ -14,7 +14,7 @@ namespace BugTracker.Models
         public DateTime Created { get; set; } = DateTime.Now;
         public DateTime? Updated { get; set; } 
 
-        public string ProjectId { get; set; }
+        public int ProjectId { get; set; }
         public virtual Project Project { get; set; }
 
         public int TicketTypeId { get; set; }
@@ -28,7 +28,7 @@ namespace BugTracker.Models
 
         public string OwnerUserId { get; set; }
         public virtual ApplicationUser OwnerUser { get; set; }
-
+        
         public string AssignedToUserId { get; set; }
         public virtual ApplicationUser AssignedToUser{ get; set; }
     }
