@@ -1,7 +1,11 @@
-﻿@model IEnumerable<BugTracker.Models.Ticket>
+﻿@model IPagedList<BugTracker.Models.Ticket>
 @{
     ViewBag.Title = "Index";
 }
+
+@using PagedList.Mvc;
+@using PagedList;
+
 <h2>Here are your ticket(s):</h2>
 @*<h4>User:@ViewBag.UserName</h4>*@
 <p>
@@ -10,10 +14,10 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Titile)
+            @Html.DisplayNameFor(model => model.First().Titile)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayNameFor(model => model.First().Description)
         </th>
         <th>
             Time Created
@@ -25,7 +29,7 @@
             Assigned Developer
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ProjectId)
+            @Html.DisplayNameFor(model => model.First().ProjectId)
         </th>
         <th></th>
     </tr>

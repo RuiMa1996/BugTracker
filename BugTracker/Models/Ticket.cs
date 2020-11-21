@@ -8,10 +8,14 @@ namespace BugTracker.Models
 {
     public class Ticket
     {
+        public Ticket()
+        {
+            Created = System.DateTime.Now;
+        }
         public int Id { get; set; }
         public string Titile { get; set; }
         public string Description { get; set; }
-        public DateTime Created { get; set; } = DateTime.Now;
+        public DateTime Created { get; set; }
         public DateTime? Updated { get; set; } 
 
         public string ProjectId { get; set; }

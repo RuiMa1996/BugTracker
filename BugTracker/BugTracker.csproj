@@ -52,6 +52,12 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -170,42 +176,18 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\TicketssController.cs" />
+    <Compile Include="Controllers\TicketsController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202011200718202_abc.cs" />
-    <Compile Include="Migrations\202011200718202_abc.Designer.cs">
-      <DependentUpon>202011200718202_abc.cs</DependentUpon>
+    <Compile Include="Migrations\202011202157261_TryFixBug.cs" />
+    <Compile Include="Migrations\202011202157261_TryFixBug.Designer.cs">
+      <DependentUpon>202011202157261_TryFixBug.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202011200839392_aaa.cs" />
-    <Compile Include="Migrations\202011200839392_aaa.Designer.cs">
-      <DependentUpon>202011200839392_aaa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011200844164_bbb.cs" />
-    <Compile Include="Migrations\202011200844164_bbb.Designer.cs">
-      <DependentUpon>202011200844164_bbb.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011200854174_hhhh.cs" />
-    <Compile Include="Migrations\202011200854174_hhhh.Designer.cs">
-      <DependentUpon>202011200854174_hhhh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011200901154_ggg.cs" />
-    <Compile Include="Migrations\202011200901154_ggg.Designer.cs">
-      <DependentUpon>202011200901154_ggg.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011200903208_qwe.cs" />
-    <Compile Include="Migrations\202011200903208_qwe.Designer.cs">
-      <DependentUpon>202011200903208_qwe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011192117418_FixProblems.cs" />
-    <Compile Include="Migrations\202011192117418_FixProblems.Designer.cs">
-      <DependentUpon>202011192117418_FixProblems.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011201628552_FetchedCode.cs" />
-    <Compile Include="Migrations\202011201628552_FetchedCode.Designer.cs">
-      <DependentUpon>202011201628552_FetchedCode.cs</DependentUpon>
+    <Compile Include="Migrations\202011210146332_ChangedDataTypeOfTicketType.cs" />
+    <Compile Include="Migrations\202011210146332_ChangedDataTypeOfTicketType.Designer.cs">
+      <DependentUpon>202011210146332_ChangedDataTypeOfTicketType.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -231,6 +213,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -288,11 +271,11 @@
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\AddUserToRole.cshtml" />
     <Content Include="Views\User\RemoveUserFromeRole.cshtml" />
-    <Content Include="Views\Ticketss\Create.cshtml" />
-    <Content Include="Views\Ticketss\Delete.cshtml" />
-    <Content Include="Views\Ticketss\Details.cshtml" />
-    <Content Include="Views\Ticketss\Edit.cshtml" />
-    <Content Include="Views\Ticketss\Index.cshtml" />
+    <Content Include="Views\Tickets\Create.cshtml" />
+    <Content Include="Views\Tickets\Delete.cshtml" />
+    <Content Include="Views\Tickets\Details.cshtml" />
+    <Content Include="Views\Tickets\Edit.cshtml" />
+    <Content Include="Views\Tickets\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -311,29 +294,11 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202011200718202_abc.resx">
-      <DependentUpon>202011200718202_abc.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011202157261_TryFixBug.resx">
+      <DependentUpon>202011202157261_TryFixBug.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011200839392_aaa.resx">
-      <DependentUpon>202011200839392_aaa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011200844164_bbb.resx">
-      <DependentUpon>202011200844164_bbb.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011200854174_hhhh.resx">
-      <DependentUpon>202011200854174_hhhh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011200901154_ggg.resx">
-      <DependentUpon>202011200901154_ggg.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011200903208_qwe.resx">
-      <DependentUpon>202011200903208_qwe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011192117418_FixProblems.resx">
-      <DependentUpon>202011192117418_FixProblems.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011201628552_FetchedCode.resx">
-      <DependentUpon>202011201628552_FetchedCode.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011210146332_ChangedDataTypeOfTicketType.resx">
+      <DependentUpon>202011210146332_ChangedDataTypeOfTicketType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
