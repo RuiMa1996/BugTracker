@@ -35,5 +35,10 @@ namespace BugTracker.Models
        
         public string AssignedToUserId { get; set; }
         public virtual ApplicationUser AssignedToUser{ get; set; }
+
+        public ICollection<TicketAttachment> TicketAttachments { get; set; }
+        public ICollection<TicketComment> TicketComments { get; set; }
+        public ICollection<TicketHistory> TicketHistories { get; set; }
+        public ICollection<TicketNotification> TicketNotifications { get; set; }
     }
 }

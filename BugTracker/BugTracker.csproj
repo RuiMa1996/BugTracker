@@ -187,14 +187,19 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProjectsController.cs" />
+    <Compile Include="Controllers\TicketCommentsController.cs" />
     <Compile Include="Controllers\TicketsController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202011221548061_AnothorPulledCode.cs" />
-    <Compile Include="Migrations\202011221548061_AnothorPulledCode.Designer.cs">
-      <DependentUpon>202011221548061_AnothorPulledCode.cs</DependentUpon>
+    <Compile Include="Migrations\202011222150483_Pagedlist.cs" />
+    <Compile Include="Migrations\202011222150483_Pagedlist.Designer.cs">
+      <DependentUpon>202011222150483_Pagedlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011222205340_AddCommentAndAttachment.cs" />
+    <Compile Include="Migrations\202011222205340_AddCommentAndAttachment.Designer.cs">
+      <DependentUpon>202011222205340_AddCommentAndAttachment.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -289,6 +294,11 @@
     <Content Include="Views\Tickets\DeveloperTicketList.cshtml" />
     <Content Include="Views\Tickets\SubmitterTicketList.cshtml" />
     <Content Include="Views\Tickets\Create.cshtml" />
+    <Content Include="Views\TicketComments\Create.cshtml" />
+    <Content Include="Views\TicketComments\Delete.cshtml" />
+    <Content Include="Views\TicketComments\Details.cshtml" />
+    <Content Include="Views\TicketComments\Edit.cshtml" />
+    <Content Include="Views\TicketComments\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -307,12 +317,15 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202011221548061_AnothorPulledCode.resx">
-      <DependentUpon>202011221548061_AnothorPulledCode.cs</DependentUpon>
-    </EmbeddedResource>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
+    <EmbeddedResource Include="Migrations\202011222150483_Pagedlist.resx">
+      <DependentUpon>202011222150483_Pagedlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011222205340_AddCommentAndAttachment.resx">
+      <DependentUpon>202011222205340_AddCommentAndAttachment.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
