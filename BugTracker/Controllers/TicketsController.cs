@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using BugTracker.Models;
 using Microsoft.AspNet.Identity;
+using PagedList.Mvc;
+using PagedList;
 
 namespace BugTracker.Controllers
 {
@@ -17,10 +19,35 @@ namespace BugTracker.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Tickets
-        public ActionResult Index()
+        public ActionResult Index(int? i)
         {
-            var tickets = db.Tickets.Include(t => t.AssignedToUser).Include(t => t.OwnerUser).Include(t => t.Project).Include(t => t.TicketPriority).Include(t => t.TicketStatus).Include(t => t.TicketType);
-            return View(tickets.ToList());
+            var tickets = db.Tickets
+                .Include(t => t.AssignedToUser)
+                .Include(t => t.OwnerUser)
+                .Include(t => t.Project)
+                .Include(t => t.TicketPriority)
+                .Include(t => t.TicketStatus)
+                .Include(t => t.TicketType)
+                .ToList();
+            return View(tickets.ToPagedList(i ?? 1, 5));
+        }
+
+        [HttpPost]
+        public ActionResult Index(int? i, string searchTxt)
+        {
+            var tickets = db.Tickets
+                .Include(t => t.AssignedToUser)
+                .Include(t => t.OwnerUser)
+                .Include(t => t.Project)
+                .Include(t => t.TicketPriority)
+                .Include(t => t.TicketStatus)
+                .Include(t => t.TicketType)
+                .ToList();
+            if(searchTxt != null)
+            {
+                tickets = db.Tickets.Where(x => x.Titile.Contains(searchTxt)).ToList();
+            }
+            return View(tickets.ToPagedList(i ?? 1, 5));
         }
 
         public ActionResult DeveloperTicketList()
