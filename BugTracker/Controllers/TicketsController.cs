@@ -38,6 +38,21 @@ namespace BugTracker.Controllers
             return View(developerTickets.ToList());
         }
 
+        public ActionResult SubmitterTicketList()
+        {
+            var currentUserId = User.Identity.GetUserId();
+            var tickets = db.Tickets.Include(t => t.AssignedToUser)
+                                    .Include(t => t.OwnerUser)
+                                    .Include(t => t.Project)
+                                    .Include(t => t.TicketPriority)
+                                    .Include(t => t.TicketStatus)
+                                    .Include(t => t.TicketType);
+            var developerTickets = from t in tickets
+                                   where t.OwnerUserId == currentUserId
+                                   select t;
+            return View(developerTickets.ToList());
+        }
+
         // GET: Tickets/Details/5
         public ActionResult Details(int? id)
         {
