@@ -102,6 +102,20 @@ namespace BugTracker.Migrations
                 manager.AddToRole(Developer.Id, "Developer");
             }
 
+            var Developer2 = new ApplicationUser
+            {
+                UserName = "developer2@developer.com",
+                Email = "developer2@developer.com",
+                PasswordHash = PasswordHash.HashPassword("123456"),
+            };
+            if (!context.Users.Any(u => u.UserName == "developer2@developer.com"))
+            {
+                var store = new UserStore<ApplicationUser>(context);
+                var manager = new UserManager<ApplicationUser>(store);
+                manager.Create(Developer2);
+                manager.AddToRole(Developer2.Id, "Developer");
+            }
+
             var Submitter = new ApplicationUser
             {
                 UserName = "submitter@submitter.com",
@@ -194,7 +208,7 @@ namespace BugTracker.Migrations
 
                 new Ticket
                 {
-                    Id = 2,
+                    Id = 3,
                     Titile = "Ticket3",
                     Description = "this one is assigned",
                     ProjectId = 2,
@@ -203,6 +217,21 @@ namespace BugTracker.Migrations
                     TicketStatusId =3,
                     OwnerUserId = Submitter.Id,
                     AssignedToUserId = Developer.Id,
+                    Created= DateTime.Now,
+                    Updated = DateTime.Now
+                },
+
+                new Ticket
+                {
+                    Id = 4,
+                    Titile = "Ticket4",
+                    Description = "this one is assigned",
+                    ProjectId = 2,
+                    TicketTypeId = 3,
+                    TicketPriorityId =2,
+                    TicketStatusId =3,
+                    OwnerUserId = Submitter.Id,
+                    AssignedToUserId = Developer2.Id,
                     Created= DateTime.Now,
                     Updated = DateTime.Now
                 },

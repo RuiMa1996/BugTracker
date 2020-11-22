@@ -36,6 +36,7 @@ namespace BugTracker.Controllers
         }
 
         // GET: Projects/Create
+        [Authorize(Roles = "Admin,Project Manager")]
         public ActionResult Create()
         {
             return View();
@@ -45,7 +46,7 @@ namespace BugTracker.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken]     
         public ActionResult Create([Bind(Include = "Id,Name")] Project project)
         {
             if (ModelState.IsValid)
