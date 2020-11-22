@@ -277,7 +277,6 @@
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\AddUserToRole.cshtml" />
     <Content Include="Views\User\RemoveUserFromeRole.cshtml" />
-    <Content Include="Views\Tickets\Create.cshtml" />
     <Content Include="Views\Tickets\Delete.cshtml" />
     <Content Include="Views\Tickets\Details.cshtml" />
     <Content Include="Views\Tickets\Edit.cshtml" />
@@ -289,6 +288,7 @@
     <Content Include="Views\Projects\Index.cshtml" />
     <Content Include="Views\Tickets\DeveloperTicketList.cshtml" />
     <Content Include="Views\Tickets\SubmitterTicketList.cshtml" />
+    <Content Include="Views\Tickets\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

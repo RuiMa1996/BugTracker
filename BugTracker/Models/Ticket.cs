@@ -24,7 +24,7 @@ namespace BugTracker.Models
         public int TicketTypeId { get; set; }
         public virtual TicketType TicketType { get; set; }
 
-        public int TicketStatusId { get; set; } = 1;
+        public int TicketStatusId { get; set; } 
         public virtual TicketStatus TicketStatus { get; set; }
 
         public int TicketPriorityId { get; set; }

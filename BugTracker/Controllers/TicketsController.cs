@@ -101,7 +101,7 @@ namespace BugTracker.Controllers
             ViewBag.OwnerUserId = User.Identity.GetUserId();
             ViewBag.ProjectId = new SelectList(db.Projects, "Id", "Name");
             ViewBag.TicketPriorityId = new SelectList(db.TicketPriorities, "id", "Name");
-            ViewBag.TicketStatusId = new SelectList(db.TicketStatus, "id", "Name");
+            ViewBag.TicketStatusId = new SelectList(db.TicketStatuses, "id", "Name");
             ViewBag.TicketTypeId = new SelectList(db.TicketTypes, "id", "Name");
             return View();
         }
@@ -115,6 +115,9 @@ namespace BugTracker.Controllers
         {
             if (ModelState.IsValid)
             {
+                //ticket.TicketPriorityId = 3;
+                //ticket.TicketStatusId = 1;
+                ticket.OwnerUserId = User.Identity.GetUserId();
                 db.Tickets.Add(ticket);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -122,7 +125,7 @@ namespace BugTracker.Controllers
             ViewBag.OwnerUserId = User.Identity.GetUserId();
             ViewBag.ProjectId = new SelectList(db.Projects, "Id", "Name", ticket.ProjectId);
             ViewBag.TicketPriorityId = new SelectList(db.TicketPriorities, "id", "Name", ticket.TicketPriorityId);
-            ViewBag.TicketStatusId = new SelectList(db.TicketStatus, "id", "Name", ticket.TicketStatusId);
+            ViewBag.TicketStatusId = new SelectList(db.TicketStatuses, "id", "Name", ticket.TicketStatusId);
             ViewBag.TicketTypeId = new SelectList(db.TicketTypes, "id", "Name", ticket.TicketTypeId);
             return View(ticket);
         }
