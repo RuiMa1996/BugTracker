@@ -1,64 +1,87 @@
-﻿@model IPagedList<BugTracker.Models.Ticket>
+﻿@model IEnumerable<BugTracker.Models.Ticket>
+
 @{
     ViewBag.Title = "Index";
 }
 
-@using PagedList.Mvc;
-@using PagedList;
+<h2>Index</h2>
 
-<h2>Here are your ticket(s):</h2>
-@*<h4>User:@ViewBag.UserName</h4>*@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.First().Titile)
+           Assigned User
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.First().Description)
+            Owner
         </th>
         <th>
-            Time Created
+            Project
         </th>
         <th>
-            Time Updated
+            Priority
         </th>
         <th>
-            Assigned Developer
+            Status
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.First().ProjectId)
+            Type
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Titile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Created)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Updated)
         </th>
         <th></th>
     </tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Titile)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Created)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Updated)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AssignedToUser.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProjectId)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-            </td>
-        </tr>
-    }
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssignedToUser.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnerUser.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Project.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TicketPriority.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TicketStatus.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TicketType.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Titile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Created)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Updated)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
 </table>

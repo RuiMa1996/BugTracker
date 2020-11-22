@@ -24,7 +24,7 @@ namespace BugTracker.Models
         public int TicketTypeId { get; set; }
         public virtual TicketType TicketType { get; set; }
 
-        public int TicketStatusId { get; set; }
+        public int TicketStatusId { get; set; } = 1;
         public virtual TicketStatus TicketStatus { get; set; }
 
         public int TicketPriorityId { get; set; }
@@ -32,7 +32,7 @@ namespace BugTracker.Models
 
         public string OwnerUserId { get; set; }
         public virtual ApplicationUser OwnerUser { get; set; }
-        
+       
         public string AssignedToUserId { get; set; }
         public virtual ApplicationUser AssignedToUser{ get; set; }
     }

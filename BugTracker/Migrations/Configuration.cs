@@ -58,9 +58,9 @@ namespace BugTracker.Migrations
             }
 
             /*------------------------------------------------------------------------------------------------------*/
-            /*Creating and adding one users to roles*/
+            /*Creating and adding users to roles*/
             var PasswordHash = new PasswordHasher();
-            var user1 = new ApplicationUser
+            var Admin = new ApplicationUser
             {
                 UserName = "Admin@admin.com",
                 Email = "Admin@admin.com",
@@ -70,11 +70,11 @@ namespace BugTracker.Migrations
             {
                 var store = new UserStore<ApplicationUser>(context);
                 var manager = new UserManager<ApplicationUser>(store);
-                manager.Create(user1);
-                manager.AddToRole(user1.Id, "Admin");
+                manager.Create(Admin);
+                manager.AddToRole(Admin.Id, "Admin");
             }
 
-            var user2 = new ApplicationUser
+            var ProjectManager = new ApplicationUser
             {
                 UserName = "manager@manager.com",
                 Email = "manager@manager.com",
@@ -84,11 +84,11 @@ namespace BugTracker.Migrations
             {
                 var store = new UserStore<ApplicationUser>(context);
                 var manager = new UserManager<ApplicationUser>(store);
-                manager.Create(user2);
-                manager.AddToRole(user2.Id, "Project Manager");
+                manager.Create(ProjectManager);
+                manager.AddToRole(ProjectManager.Id, "Project Manager");
             }
 
-            var user3 = new ApplicationUser
+            var Developer = new ApplicationUser
             {
                 UserName = "developer@developer.com",
                 Email = "developer@developer.com",
@@ -98,11 +98,11 @@ namespace BugTracker.Migrations
             {
                 var store = new UserStore<ApplicationUser>(context);
                 var manager = new UserManager<ApplicationUser>(store);
-                manager.Create(user3);
-                manager.AddToRole(user3.Id, "Developer");
+                manager.Create(Developer);
+                manager.AddToRole(Developer.Id, "Developer");
             }
 
-            var user4 = new ApplicationUser
+            var Submitter = new ApplicationUser
             {
                 UserName = "submitter@submitter.com",
                 Email = "submitter@submitter.com",
@@ -112,12 +112,12 @@ namespace BugTracker.Migrations
             {
                 var store = new UserStore<ApplicationUser>(context);
                 var manager = new UserManager<ApplicationUser>(store);
-                manager.Create(user4);
-                manager.AddToRole(user4.Id, "Submitter");
+                manager.Create(Submitter);
+                manager.AddToRole(Submitter.Id, "Submitter");
             }
 
             /*------------------------------------------------------------------------------------------------------*/
-            //Creating Projects, Tickets, TicketTypes, TicketStaus, TicketPriorities
+            /*Creating Projects, Tickets, TicketTypes, TicketStaus, TicketPriorities*/
             var priority1 = new TicketPriority
             {
                 id = 1,
@@ -161,11 +161,6 @@ namespace BugTracker.Migrations
             };
             context.Projects.AddOrUpdate(p => p.Name, projects);
 
-            var users = new List<ApplicationUser>();
-            users.Add(user1);
-            users.Add(user2); 
-            users.Add(user3);
-            users.Add(user4);
             Ticket[] tickets =
             {
                 new Ticket
@@ -178,8 +173,8 @@ namespace BugTracker.Migrations
                     TicketPriorityId =1,
                     TicketStatusId =1,
                     Created= DateTime.Now,
-                    OwnerUserId = users.Find(i=>i.UserName=="submitter@submitter.com").Id,
-                    AssignedToUserId = users.Find(i=>i.UserName=="developer@developer.com").Id,
+                    OwnerUserId = Submitter.Id,
+                    AssignedToUserId = Developer.Id,
                 },
 
                 new Ticket
@@ -191,8 +186,8 @@ namespace BugTracker.Migrations
                     TicketTypeId = 3,
                     TicketPriorityId =1,
                     TicketStatusId =1,
-                    OwnerUserId = users.Find(i=>i.UserName=="submitter@submitter.com").Id,
-                    AssignedToUserId = users.Find(i=>i.UserName=="developer@developer.com").Id,
+                    OwnerUserId = Submitter.Id,
+                    AssignedToUserId = Developer.Id,
                     Created= DateTime.Now,
                     Updated = DateTime.Now
                 },
@@ -206,8 +201,8 @@ namespace BugTracker.Migrations
                     TicketTypeId = 3,
                     TicketPriorityId =2,
                     TicketStatusId =3,
-                    OwnerUserId = users.Find(i=>i.UserName=="submitter@submitter.com").Id,
-                    AssignedToUserId = users.Find(i=>i.UserName=="developer@developer.com").Id,
+                    OwnerUserId = Submitter.Id,
+                    AssignedToUserId = Developer.Id,
                     Created= DateTime.Now,
                     Updated = DateTime.Now
                 },
