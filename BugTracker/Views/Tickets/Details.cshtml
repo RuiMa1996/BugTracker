@@ -92,21 +92,106 @@
 
     </dl>
 </div>
-@if (ViewBag.Identity == "Admin" || @Model.OwnerUserId == ViewBag.UserId || Model.AssignedToUserId == ViewBag.UserId)
-{
-    <p>
-        @Html.ActionLink("Add a comment", "../TicketComments/Create", new { TicketId = Model.Id }, null)
-    </p>
-}
+<h3>Comments</h3>
+<table class="table">
+    <tr>
+        <th>
+           Titile
+        </th>
+        <th>
+           User
+        </th>
+        <th>
+            Comment Context
+        </th>
+        <th>
+            Create Time
+        </th>
+    </tr>
 
-@if (ViewBag.Identity == "Admin" || @Model.OwnerUserId == ViewBag.UserId || Model.AssignedToUserId == ViewBag.UserId)
-{
-    <p>
-        @Html.ActionLink("Add an attachment", "AddAttachment", new { TicketId = Model.Id }, null)
-    </p>
-}
+    @foreach (var c in ViewBag.Comments)
+    {
+        <tr>
+            <td>
+                @c.Ticket.Titile
+            </td>
+            <td>
+                @c.User.Email
+            </td>
+            <td>
+                @c.Comment
+            </td>
+            <td>
+                @c.Created
+            </td>
+        </tr>
+    }
+    </table>
 
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+    @if (ViewBag.Identity == "Admin" || @Model.OwnerUserId == ViewBag.UserId || Model.AssignedToUserId == ViewBag.UserId)
+    {
+        <p>
+            @Html.ActionLink("Add a comment", "../TicketComments/Create", new { TicketId = Model.Id }, null)
+        </p>
+    }
+<h3>Attachment</h3>
+<table class="table">
+    <tr>
+        <th>
+           Ticket
+        </th>
+        <th>
+           User Name
+        </th>
+        <th>
+           FilePath
+        </th>
+        <th>
+           Description
+        </th>
+        <th>
+           Create Time
+        </th>
+        <th>
+           FileUrl
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var a in ViewBag.Attachments)
+    {
+        <tr>
+            <td>
+                @a.Ticket.Titile
+            </td>
+            <td>
+                @a.User.Email
+            </td>
+            <td>
+                @a.FilePath
+            </td>
+            <td>
+                @a.Description
+            </td>
+            <td>
+                @a.Created
+            </td>
+            <td>
+                @a.FileUrl
+            </td>
+        </tr>
+    }
+
+</table>
+
+    @if (ViewBag.Identity == "Admin" || @Model.OwnerUserId == ViewBag.UserId || Model.AssignedToUserId == ViewBag.UserId)
+    {
+        <p>
+            @Html.ActionLink("Add an attachment", "AddAttachment", new { TicketId = Model.Id }, null)
+        </p>
+    }
+
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>

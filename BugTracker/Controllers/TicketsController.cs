@@ -43,7 +43,7 @@ namespace BugTracker.Controllers
                 .Include(t => t.TicketStatus)
                 .Include(t => t.TicketType)
                 .ToList();
-            if(searchTxt != null)
+            if (searchTxt != null)
             {
                 tickets = db.Tickets.Where(x => x.Titile.Contains(searchTxt)).ToList();
             }
@@ -97,6 +97,18 @@ namespace BugTracker.Controllers
             {
                 return HttpNotFound();
             }
+            var ticketComments = db.TicketComments.Include(t => t.Ticket)
+                                    .Include(t => t.User);
+            var comments = from c in ticketComments
+                           where c.TicketId == id
+                           select c;
+            ViewBag.Comments = comments;
+
+            var ticketAttachments = db.TicketAttachments.Include(t => t.Ticket).Include(t => t.User);
+            var attachments = from a in ticketAttachments
+                              where a.TicketId == id
+                              select a;
+            ViewBag.Attachments = attachments;
             return View(ticket);
         }
 
