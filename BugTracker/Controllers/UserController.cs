@@ -3,7 +3,6 @@ using System.Web.Mvc;
 
 namespace TaskManagementProj.Controllers
 {
-    [Authorize]
     [Authorize(Roles = "Admin")]
     public class UserController : Controller
     {

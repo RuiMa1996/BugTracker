@@ -83,6 +83,11 @@ namespace BugTracker.Controllers
         // GET: Tickets/Details/5
         public ActionResult Details(int? id)
         {
+            ViewBag.UserId = User.Identity.GetUserId();
+            if (User.IsInRole("Admin"))
+            {
+                ViewBag.Identity = "Admin";
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -95,7 +100,9 @@ namespace BugTracker.Controllers
             return View(ticket);
         }
 
+
         // GET: Tickets/Create
+        [Authorize(Roles = "Submitter")]
         public ActionResult Create()
         {
             ViewBag.OwnerUserId = User.Identity.GetUserId();
@@ -110,6 +117,7 @@ namespace BugTracker.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = "Submitter")]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Titile,Description,Created,Updated,ProjectId,TicketTypeId,TicketStatusId,TicketPriorityId,OwnerUserId,AssignedToUserId")] Ticket ticket)
         {

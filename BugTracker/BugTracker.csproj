@@ -294,11 +294,11 @@
     <Content Include="Views\Tickets\DeveloperTicketList.cshtml" />
     <Content Include="Views\Tickets\SubmitterTicketList.cshtml" />
     <Content Include="Views\Tickets\Create.cshtml" />
-    <Content Include="Views\TicketComments\Create.cshtml" />
     <Content Include="Views\TicketComments\Delete.cshtml" />
     <Content Include="Views\TicketComments\Details.cshtml" />
     <Content Include="Views\TicketComments\Edit.cshtml" />
     <Content Include="Views\TicketComments\Index.cshtml" />
+    <Content Include="Views\TicketComments\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
