@@ -100,7 +100,27 @@ namespace BugTracker.Controllers
             return View(ticket);
         }
 
+        public ActionResult AddAttachment(int TicketId)
+        {
+            return View();
+        }
 
+        [HttpPost]
+        public ActionResult AddAttachment(int TicketId, TicketAttachment ticketAttachment)
+        {
+            if (ModelState.IsValid)
+            {
+                ticketAttachment.UserId = User.Identity.GetUserId();
+                ticketAttachment.TicketId = TicketId;
+                db.TicketAttachments.Add(ticketAttachment);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            //ViewBag.TicketId = new SelectList(db.Tickets, "Id", "Titile", ticketComment.TicketId);
+            //ViewBag.UserId = User.Identity.GetUserId();
+            return View(ticketAttachment);
+        }
         // GET: Tickets/Create
         [Authorize(Roles = "Submitter")]
         public ActionResult Create()
